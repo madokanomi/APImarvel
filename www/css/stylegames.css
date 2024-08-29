@@ -5,6 +5,13 @@
     font-family: "Poppins", sans-serif;
   }
 
+.titulo{
+       position: absolute;
+    color: white;
+  top:5%;
+   font-family: "Bebas Neue";
+   font-size:4vh;
+}
 .hero {
     position: relative;
     height: 100vh;
@@ -19,13 +26,6 @@
     z-index:-10;
 }
 
-.text-container {
-    position: relative;
-    color: white;
-    text-align: center;
-    z-index: 0;
-     pointer-events: none;
-}
 
 .hero::after {
     content: '';
@@ -50,13 +50,7 @@
         opacity: 1;
     }
 }
-p{
-       position: absolute;
-    color: white;
-  top:5%;
-   font-family: "Bebas Neue";
-   font-size:4vh;
-}
+
   .container {
       
   background: rgba(0, 0, 0, 0.9);
@@ -70,8 +64,6 @@ p{
     right: 50%;
     top: 6em;
     border-radius: 1em;
-
-    
   }
   .input-container {
     display: grid;
@@ -83,17 +75,17 @@ p{
     background-color: #3a3939;
     color: #ffffff;
     border: none;
-    border-radius: 0.9em;
+    border-radius: 0.5em;
     outline: none;
-        font-weight:bold;
+
   }
   button {
     outline: none;
     border: none;
     background-color: #e01a38;
-    color: #ffffff;
-    border-radius: 1em;
-    font-weight:bold;
+  
+     color: #ffffff;
+    border-radius: 0.5em;
   }
   .display-container {
     padding: 1em;
