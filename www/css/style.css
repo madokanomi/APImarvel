@@ -1,0 +1,99 @@
+body{
+      margin: 0;
+    padding: 0;
+    overflow: hidden;
+     font-family: "Bebas Neue";
+}
+
+
+/* Container do texto */
+.text-container {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 0;
+     pointer-events: none;
+}
+
+/* Animação de entrada do texto */
+.fade-in-marvel {
+     position: absolute;
+    top: 20%; 
+    left: 32%;
+    transform: translate(-50%, -80%); 
+    font-size: 5vh; 
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 3s forwards; 
+    color:rgb(255, 109, 109);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 3s forwards; /* Animação que faz o texto aparecer lentamente */
+}
+
+a{
+    text-decoration:none;
+     top: 90%; 
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 5s forwards; /* Animação que faz o texto aparecer lentamente */
+    z-index:10;
+       position: relative;
+       cursor:pointer;
+         pointer-events: auto; 
+         color:white;
+}
+
+/* Keyframes da animação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('marvelgames.jpg'); /* Substitua pela URL da sua imagem */
+    background-size: cover;
+    background-position: center;
+    filter: blur(0px);
+    transition: filter 2s ease; /* Animação de desfoque */
+    z-index:1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -10;
+    filter: blur(10px); /* Ajuste o nível de blur conforme necessário */
+    transition: opacity 2s ease;
+    opacity: 0;
+    animation: blurEffect 2s forwards 1s; /* Animação que faz o blur aparecer */
+}
+
+@keyframes blurEffect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
